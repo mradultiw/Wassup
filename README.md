@@ -29,8 +29,6 @@
 
 ---
 
-<mark>⚠ Watchout! construction work ahead</mark>
-
 #### NOTE: 
 >This is an educational project developed with intention of learning different technologies  mentioned above and might not work efficiently if used at scale. If you are a student or equivalent, don't feel shy to fork and use **:)** 
 >
@@ -83,5 +81,5 @@ Clicking on your name in top-right, you can see as well as edit your profile.
 	![GIF](https://github.com/mradultiw/Wassup/blob/main/ss/gif.PNG)
 
 <u>**7. options.:**</u>
-	
-	![options](https://github.com/mradultiw/Wassup/blob/main/ss/options.PNG)
+	A list of options that can select. More options maybe added in future commits, if possible.
+	![Options](https://github.com/mradultiw/Wassup/blob/main/ss/options.PNG)
