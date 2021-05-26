@@ -74,7 +74,8 @@ Clicking on your name in top-right, you can see as well as edit your profile.
 ![profile find result](https://github.com/mradultiw/Wassup/blob/main/ss/profile%20finding.PNG)
 
 <u>**5. Viewing profile while chating:**</u>
-	To view someone's profile later you need to click on their image icon![viewing profile](https://github.com/mradultiw/Wassup/blob/main/ss/viewing%20profile.PNG)
+	To view someone's profile later you need to click on their image icon. Full screen image can also be viewed on clicking picture again.
+	![viewing profile](https://github.com/mradultiw/Wassup/blob/main/ss/viewing%20profile.PNG)
 	
 <u>**6.  Can Send Images/GIF:**</u>
 	You can send text/images/gif which can also be viewed on full size screen on clicking over it
