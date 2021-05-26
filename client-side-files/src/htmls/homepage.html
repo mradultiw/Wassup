@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wassup!</title>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'unsafe-inline' 'self' http://localhost:3000/"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/homepage_styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div id="nav-title">Wassup!</div>
+      <div id="nav-buttons">
+        <div id="minimize"><span>&dash;</span></div>
+        <div id="maximize"><span>&square;</span></div>
+        <div id="quit"><span>&times;</span></div>
+      </div>
+    </nav>
+    <div class="container-fluid w-100">
+      <div class="row justify-content-center h-100 w-100">
+        <!-- contact window -->
+        <div class="col-3 h-100 chat contact-window">
+          <!-- contact card -->
+          <div class="card mb contacts_card">
+            <!-- card head -->
+            <div class="card-header user-info">
+              <!-- user info bar: User Name-->
+              <label
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-user-profile"
+                id="user-label"
+              ></label>
+              <div class="dropstart">
+                <i
+                  class="fas fa-ellipsis-v"
+                  type="button"
+                  id="dropdownMenu"
+                  data-bs-toggle="dropdown"
+                >
+                </i>
+                <ul class="dropdown-menu">
+                  <li>
+                    <button
+                      class="dropdown-item btn"
+                      type="button"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal-find-user-account"
+                    >
+                      Contacts
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item btn"
+                      type="button"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal-find-user-account"
+                    >
+                      Create Group
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item btn"
+                      type="button"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal-block-list"
+                    >
+                      Block List
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item btn btn-danger"
+                      id="logout-btn"
+                      type="button"
+                    >
+                      logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <hr style="border: 0.5px solid #f5f6fa" />
+            <!-- card body -->
+            <div class="card-body contacts_body">
+              <ul class="contacts"></ul>
+            </div>
+            <!-- card foot -->
+            <div class="card-footer"></div>
+          </div>
+        </div>
+        <!-- Chat window -->
+        <div class="col-9 h-100 chat chat-window">
+          <div class="card">
+            <!-- chat-window-header -->
+            <div class="card-header msg_head"></div>
+            <hr style="border: 0.5px solid #f5f6fa" />
+            <!-- chat-window-body -->
+            <div class="card-body msg_card_body" id="message-area"></div>
+            <!-- chat-window-footer -->
+            <div class="card-footer">
+              <div
+                class="input-group chat-window-disabled"
+                id="chat-window-input-group"
+              >
+                <div class="input-group-append">
+                  <label for="attach-file-id">
+                    <span class="input-group-text attach_btn" id="attach_button"
+                      ><i class="fas fa-paperclip"></i
+                    ></span>
+                    <input
+                      type="file"
+                      id="attach-file-id"
+                      accept="image/png, image/jpeg, image/jpg, 
+                            image/gif, image/webp"
+                      onchange="uploadFile();"
+                      style="display: none"
+                    />
+                  </label>
+                </div>
+                <input
+                  name="typing_box"
+                  type="text"
+                  class="type_msg form-control"
+                  placeholder="Type your message..."
+                ></input>
+                <div class="input-group-append">
+                  <span class="input-group-text send_btn" id="send_button"
+                    ><i class="fas fa-location-arrow"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------ Modals ---------------- -->
+
+    <!-- Modal profile -->
+    <div class="modal fade" id="modal-user-profile" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Full Size profile pic -->
+    <div class="modal fade" id="modal-user-profile-fullsize" tabindex="-1">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-body" style="text-align: center"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Find user account-->
+    <div class="modal fade" id="modal-find-user-account" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form
+            action="#"
+            method="post"
+            class="modal-header"
+            name="find-user-form"
+            style="display: block"
+          >
+            <div class="input-group mb-3 form-group">
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="input-find-user-account"
+                placeholder="Find Contact by email"
+              />
+              <div class="input-group-append">
+                <button
+                  type="submit"
+                  class="btn btn-outline-primary tx-tfm"
+                  style="float: right"
+                >
+                  Find
+                </button>
+              </div>
+            </div>
+            <p
+              id="find-accnt-error-container"
+              style="margin: -20px auto -10px"
+            ></p>
+          </form>
+          <h5 style="color: white; margin: auto">Saved Contacts</h5>
+          <div class="modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Block list-->
+    <div class="modal fade" id="modal-block-list" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 style="color: white; margin: auto">Blocked Users</h3>
+          </div>
+          <div class="modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------------- -->
+    <script src="../scripts/chat.js"></script>
+  </body>
+</html>

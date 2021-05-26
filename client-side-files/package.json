@@ -1,0 +1,27 @@
+{
+  "name": "client-side-files",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js --trace-warnings",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^12.0.7"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.0",
+    "dotenv": "^9.0.2",
+    "internet-available": "^1.0.0",
+    "jquery": "^3.6.0",
+    "jquery-validation": "^1.19.3",
+    "md5": "^2.3.0",
+    "pouchdb": "^7.2.2",
+    "socket.io": "^4.0.2",
+    "socket.io-client": "^4.0.2"
+  }
+}

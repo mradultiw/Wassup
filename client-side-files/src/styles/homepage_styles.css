@@ -1,0 +1,348 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background: #575750;
+}
+
+.chat {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.card {
+  height: 100%;
+  border-radius: 1rem !important;
+  background-color: rgba(0, 0, 0, 1) !important;
+}
+.contacts_body {
+  padding: 0.75rem 0 !important;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+.msg_card_body {
+  overflow-y: auto;
+}
+.card-header {
+  border-radius: 1rem 1rem 0 0 !important;
+  border-bottom: 0 !important;
+}
+.card-footer {
+  border-radius: 0 0 1rem 1rem !important;
+  border-top: 0 !important;
+}
+.container {
+  align-content: center;
+}
+.type_msg {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  border: 0 !important;
+  color: white !important;
+  height: 3.75rem !important;
+  overflow-y: auto !important;
+}
+.type_msg:focus {
+  box-shadow: none !important;
+  outline: 0px !important;
+}
+
+.attach_btn {
+  border-radius: 1rem 0 0 1rem !important;
+  background-color: rgba(0, 0, 0, 1) !important;
+  border: 0 !important;
+  color: white !important;
+  cursor: pointer;
+}
+.send_btn {
+  border-radius: 0 1rem 1rem 0 !important;
+  background-color: rgba(0, 0, 0, 1) !important;
+  border: 0 !important;
+  color: white !important;
+  cursor: pointer;
+}
+.contacts {
+  list-style: none;
+  padding: 0;
+}
+.contacts li {
+  width: 100% !important;
+  padding: 0.375rem 0.625rem;
+  margin-bottom: 1rem !important;
+}
+.active-chat-tag {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+.user_img {
+  height: 4.375rem;
+  width: 4.375rem;
+  border: 1.5px solid #f5f6fa;
+}
+.user_img_msg {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1.5px solid #f5f6fa;
+}
+.img_cont {
+  position: relative;
+  height: 4.375rem;
+  width: 4.375rem;
+}
+.img_cont_msg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.online_icon {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  background-color: #4cd137;
+  border-radius: 50%;
+  bottom: 0.2em;
+  right: 0.4em;
+  border: 1.5px solid white;
+}
+.offline {
+  background-color: #c23616 !important;
+}
+.user_info {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1rem;
+}
+.user_info span {
+  font-size: 1.25rem;
+  color: white;
+}
+.user_info p {
+  font-size: 1 rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.video_cam {
+  margin-left: 3.125rem;
+  margin-top: 0.3125rem;
+}
+.video_cam span {
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-right: 1.25rem;
+}
+.msg_cotainer_rcvd {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0.625rem;
+  border-radius: 1.5625rem;
+  background-color: #82ccdd;
+  padding: 0.625rem;
+  position: relative;
+  font-size: large;
+  min-width: 5rem !important;
+}
+.msg_cotainer_send {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0.625rem;
+  border-radius: 1.5625rem;
+  background-color: #78e08f;
+  padding: 0.625rem;
+  position: relative;
+  font-size: large;
+  min-width: 5rem !important;
+}
+.msg_time_rcvd {
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+.msg_time_send {
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+.msg_head {
+  position: relative;
+}
+
+.contact-window {
+  padding: 0.625rem 0.08rem 0.625rem 0.625rem !important;
+}
+
+.chat-window {
+  padding: 0.625rem 0.625rem 0.625rem 0.08rem !important;
+}
+
+.chat-window-disabled {
+  display: none;
+}
+
+.card {
+  background-size: cover;
+  background-image: url("../../public/bg_image.png") !important;
+}
+
+.modal-content {
+  color: #f5f6fa;
+  border: 1px solid #f5f6fa;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row {
+  position: absolute !important;
+  top: 4%;
+  max-height: 96%;
+}
+
+nav {
+  display: block;
+  width: 100%;
+  height: 4%;
+  background-color: #575750;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  margin-bottom: 5px;
+}
+
+nav #nav-title {
+  width: 30%;
+  height: 100%;
+  line-height: 1.88rem;
+  color: #ffffff;
+  float: left;
+  padding: 0 0 0 1em;
+  font-weight: bold;
+}
+
+nav #nav-buttons {
+  float: right;
+  width: 150px;
+  height: 100%;
+  line-height: 30px;
+  background-color: #222222;
+  -webkit-app-region: no-drag;
+}
+
+nav #nav-buttons #minimize,
+nav #nav-buttons #maximize,
+nav #nav-buttons #quit {
+  float: left;
+  height: 100%;
+  width: 33%;
+  text-align: center;
+  color: #f7f7f7;
+  cursor: default;
+}
+
+nav #nav-buttons #minimize:hover {
+  background-color: #333333aa;
+}
+nav #nav-buttons #maximize:hover {
+  background-color: #333333aa;
+}
+nav #nav-buttons #quit:hover {
+  background-color: #ff0000dd;
+}
+
+form .error {
+  color: #ff0000;
+  margin: 0.5rem auto !important;
+}
+
+/**************** user info chat card  *****************/
+
+#user-label {
+  position: absolute;
+  left: 0.625rem;
+  top: 0.625rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.25rem;
+  display: inline;
+}
+#dropdownMenu {
+  position: absolute;
+  right: 0.625rem;
+  top: 0.625rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.25rem;
+  display: inline;
+}
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.dropdown-item {
+  color: white;
+}
+.user-info {
+  position: relative !important;
+  margin-top: 1.25rem;
+  height: 4.15rem !important;
+  max-height: 4.15rem !important;
+}
+
+/* ***************** modal-profile *********************** */
+
+#modal-user-profile .modal-body {
+  width: 100%;
+  margin: auto 0;
+  text-align: center;
+}
+
+#modal-user-profile .modal-body #modal-profile-img {
+  height: 20rem;
+  width: 20rem;
+  border: 1.5px solid #f5f6fa;
+}
+
+#modal-user-profile .modal-body .row {
+  position: relative !important;
+  margin: 0.7rem 0;
+}
+
+#modal-user-profile .modal-body button {
+  width: 100%;
+}
+
+#modal-user-profile .modal-body .container,
+#modal-user-profile .row.btn-group {
+  padding: 0;
+  width: 100%;
+}
+
+#modal-user-profile .remove-contact {
+  background-color: rgb(247, 168, 168) !important;
+}
+
+#modal-user-profile .unblock-contact {
+  background-color: rgb(29, 149, 230) !important;
+}
+
+#attached-img-file {
+  max-width: 28rem;
+  max-height: 28rem;
+}
+
+#attached-img-fullsize {
+  width: 70rem !important;
+  height: 45rem !important;
+  max-width: 70rem !important;
+  max-height: 45rem !important;
+}
+/* **************** miscellenous ********************** */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .contacts_card {
+    margin-bottom: 1rem !important;
+  }
+}
